@@ -1,0 +1,13 @@
+#!/data/data/dev.termui/files/usr/bin/sh
+
+if [ $# != 0 ]; then
+	echo 'usage: termux-wake-lock'
+	echo 'Acquire the Termux wake lock to prevent the CPU from sleeping.'
+	exit 1
+fi
+
+am startservice \
+	--user 0 \
+	-a dev.termui.service_wake_lock \
+	dev.termui/dev.termui.app.TermuxService \
+	> /dev/null

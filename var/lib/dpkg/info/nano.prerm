@@ -1,0 +1,6 @@
+#!/data/data/dev.termui/files/usr/bin/sh
+if [ "debian" = "pacman" ] || [ "$1" != "upgrade" ]; then
+if [ -x "/data/data/dev.termui/files/usr/bin/update-alternatives" ]; then
+update-alternatives --remove editor /data/data/dev.termui/files/usr/bin/nano
+fi
+fi

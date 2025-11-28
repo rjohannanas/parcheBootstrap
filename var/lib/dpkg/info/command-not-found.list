@@ -1,0 +1,13 @@
+/.
+/data/
+/data/data/
+/data/data/dev.termui/
+/data/data/dev.termui/files/
+/data/data/dev.termui/files/usr/
+/data/data/dev.termui/files/usr/share/
+/data/data/dev.termui/files/usr/share/doc/
+/data/data/dev.termui/files/usr/share/doc/command-not-found/
+/data/data/dev.termui/files/usr/share/doc/command-not-found/LICENSE
+/data/data/dev.termui/files/usr/libexec/
+/data/data/dev.termui/files/usr/libexec/termux/
+/data/data/dev.termui/files/usr/libexec/termux/command-not-found

@@ -1,0 +1,17 @@
+/.
+/data/
+/data/data/
+/data/data/dev.termui/
+/data/data/dev.termui/files/
+/data/data/dev.termui/files/usr/
+/data/data/dev.termui/files/usr/share/
+/data/data/dev.termui/files/usr/share/man/
+/data/data/dev.termui/files/usr/share/man/man1/
+/data/data/dev.termui/files/usr/share/man/man1/dash.1.gz
+/data/data/dev.termui/files/usr/share/man/man1/sh.1.gz
+/data/data/dev.termui/files/usr/share/doc/
+/data/data/dev.termui/files/usr/share/doc/dash/
+/data/data/dev.termui/files/usr/share/doc/dash/LICENSE
+/data/data/dev.termui/files/usr/bin/
+/data/data/dev.termui/files/usr/bin/sh
+/data/data/dev.termui/files/usr/bin/dash

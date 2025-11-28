@@ -1,0 +1,12 @@
+/.
+/data/
+/data/data/
+/data/data/dev.termui/
+/data/data/dev.termui/files/
+/data/data/dev.termui/files/usr/
+/data/data/dev.termui/files/usr/share/
+/data/data/dev.termui/files/usr/share/doc/
+/data/data/dev.termui/files/usr/share/doc/libc++/
+/data/data/dev.termui/files/usr/share/doc/libc++/LICENSE
+/data/data/dev.termui/files/usr/lib/
+/data/data/dev.termui/files/usr/lib/libc++_shared.so

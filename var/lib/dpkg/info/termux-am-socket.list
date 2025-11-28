@@ -1,0 +1,13 @@
+/.
+/data/
+/data/data/
+/data/data/dev.termui/
+/data/data/dev.termui/files/
+/data/data/dev.termui/files/usr/
+/data/data/dev.termui/files/usr/share/
+/data/data/dev.termui/files/usr/share/doc/
+/data/data/dev.termui/files/usr/share/doc/termux-am-socket/
+/data/data/dev.termui/files/usr/share/doc/termux-am-socket/LICENSE
+/data/data/dev.termui/files/usr/bin/
+/data/data/dev.termui/files/usr/bin/termux-am
+/data/data/dev.termui/files/usr/bin/termux-am-socket

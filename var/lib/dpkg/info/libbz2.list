@@ -1,0 +1,16 @@
+/.
+/data/
+/data/data/
+/data/data/dev.termui/
+/data/data/dev.termui/files/
+/data/data/dev.termui/files/usr/
+/data/data/dev.termui/files/usr/include/
+/data/data/dev.termui/files/usr/include/bzlib.h
+/data/data/dev.termui/files/usr/lib/
+/data/data/dev.termui/files/usr/lib/libbz2.so.1.0
+/data/data/dev.termui/files/usr/lib/libbz2.so.1.0.8
+/data/data/dev.termui/files/usr/lib/libbz2.so
+/data/data/dev.termui/files/usr/share/
+/data/data/dev.termui/files/usr/share/doc/
+/data/data/dev.termui/files/usr/share/doc/libbz2/
+/data/data/dev.termui/files/usr/share/doc/libbz2/LICENSE

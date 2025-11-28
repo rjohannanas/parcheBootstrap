@@ -1,0 +1,2 @@
+#!/data/data/dev.termui/files/usr/bin/bash
+exec zgrep -F "$@"

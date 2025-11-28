@@ -1,0 +1,6 @@
+#!/data/data/dev.termui/files/usr/bin/sh
+if [ "debian" = "pacman" ] || [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+if [ -x "/data/data/dev.termui/files/usr/bin/update-alternatives" ]; then
+update-alternatives --install 				/data/data/dev.termui/files/usr/bin/editor editor /data/data/dev.termui/files/usr/bin/nano 20
+fi
+fi

@@ -1,0 +1,10 @@
+prefix=/data/data/dev.termui/files/usr
+exec_prefix=/data/data/dev.termui/files/usr
+libdir=/data/data/dev.termui/files/usr/lib
+includedir=/data/data/dev.termui/files/usr/include
+
+Name: blkid
+Description: Block device id library
+Version: 2.38.0
+Cflags: -I${includedir}/blkid
+Libs: -L${libdir} -lblkid
