@@ -1,0 +1,54 @@
+name: Generar Bootstrap Personalizado
+
+on:
+  workflow_dispatch: # Permite ejecutarlo manualmente desde la pestaña Actions
+    inputs:
+      new_package_name:
+        description: 'Nuevo nombre de paquete (DEBE TENER 10 CARACTERES EXACTOS)'
+        required: true
+        default: 'dev.termui'
+
+jobs:
+  patch-bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Preparar entorno
+        run: sudo apt-get install -y zip unzip sed
+
+      - name: Descargar Bootstrap Oficial
+        run: |
+          # Descargamos la versión estable para aarch64 (móviles modernos)
+          wget https://github.com/termux/termux-packages/releases/download/bootstrap-2022.04.28-r5%2Bapt-android-7/bootstrap-aarch64.zip -O original.zip
+          mkdir work_dir
+          cd work_dir
+          unzip -q ../original.zip
+
+      - name: Parchear Binarios (Hex Patch)
+        run: |
+          cd work_dir
+          NEW_PKG="${{ github.event.inputs.new_package_name }}"
+          OLD_PKG="com.termux"
+          
+          echo "Parcheando de $OLD_PKG a $NEW_PKG..."
+          
+          # Verificación de seguridad de longitud
+          if [ ${#NEW_PKG} -ne ${#OLD_PKG} ]; then
+            echo "ERROR: La longitud del nombre nuevo debe ser exactamente 10 caracteres."
+            exit 1
+          fi
+
+          # Usamos grep para buscar archivos y sed para reemplazar en modo binario, 
+          # pero para ser más seguros con binarios ELF, usamos perl que maneja bytes mejor.
+          find . -type f -not -path '*/.*' -exec perl -pi -e "s/$OLD_PKG/$NEW_PKG/g" {} +
+
+      - name: Re-empaquetar ZIP (Preservando Symlinks)
+        run: |
+          cd work_dir
+          # El flag -y preserva symlinks (muy importante para Linux)
+          zip -r9y ../bootstrap-aarch64-parcheado.zip .
+
+      - name: Subir Artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: bootstrap-listo
+          path: bootstrap-aarch64-parcheado.zip
